@@ -14,16 +14,69 @@ section {
   align-items: center;
 }
 
-/* 
-section:nth-child(1) {
+
+/* section:nth-child(1) {
+  display: none;
+}
+
+section:nth-child(2) {
   display: none;
 } */
 
 
+/* ROCKET */
+.rocket {
+  height: 220px;
+  width: 120px;
+  background: lightblue;
+}
+
+.rocket .mission-elements {
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid #4679BD;
+}
+
+.rocket .exploration-upper-stage {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: red;
+}
+
+.rocket .exploration-upper-stage::after,
+.rocket .exploration-upper-stage::before {
+  position: absolute;
+  bottom: 30px;
+  content: "";
+  height: 100px;
+  width: 60px;
+  background: #80c768;
+}
+
+.rocket .exploration-upper-stage::after {
+  left: -59px;
+  clip-path: polygon(0 71%, 99% 0, 100% 78%, 0% 100%);
+}
+
+.rocket .exploration-upper-stage::before {
+  right: -59px;
+  transform: rotateY(180deg);
+  clip-path: polygon(0 71%, 99% 0, 100% 78%, 0% 100%);
+}
 
 
+.rocket .boosters {
+  height: 20px;
+  width: 80%;
+  margin: 0 auto;
+  background: #80c768;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
 
-
+.fire {
+  
+}
 
 
 
