@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+pre {
+  background: #333;
+  color: white;
+  border: 2px solid blue;
+}
+pre code{
+}
 
 section {
   position: relative;
@@ -28,57 +35,123 @@ section:nth-child(2) {
 .rocket {
   height: 220px;
   width: 120px;
-  background: lightblue;
 }
 
 .rocket .mission-elements {
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 60px solid #4679BD;
+  max-width: 2px;
+  margin: 0 auto;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 48px solid #eee;
+  position: relative;
+  bottom: -20px;
 }
 
 .rocket .exploration-upper-stage {
   position: relative;
   height: 100%;
   width: 100%;
-  background: red;
+  background: #eee;
+  border-radius: 60%;
+  -webkit-border-radius: 60%;
+  -moz-border-radius: 60%;
+  -ms-border-radius: 60%;
+  -o-border-radius: 60%;
 }
 
 .rocket .exploration-upper-stage::after,
 .rocket .exploration-upper-stage::before {
   position: absolute;
-  bottom: 30px;
+  bottom: 40px;
   content: "";
-  height: 100px;
-  width: 60px;
-  background: #80c768;
+  height: 80px;
+  width: 50px;
+  background: orangered;
+  box-shadow: inset -18px 0px 1px #00000010;
+  border-radius: 10px;
+  z-index: -1;
 }
 
 .rocket .exploration-upper-stage::after {
-  left: -59px;
+  left: -40px;
   clip-path: polygon(0 71%, 99% 0, 100% 78%, 0% 100%);
+  transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
 }
 
 .rocket .exploration-upper-stage::before {
-  right: -59px;
-  transform: rotateY(180deg);
+  right: -40px;
   clip-path: polygon(0 71%, 99% 0, 100% 78%, 0% 100%);
+  transform: rotate(6deg) rotateY(180deg);
+  -webkit-transform: rotate(6deg) rotateY(180deg);
+  -moz-transform: rotate(6deg) rotateY(180deg);
+  -ms-transform: rotate(6deg) rotateY(180deg);
+  -o-transform: rotate(6deg) rotateY(180deg);
 }
 
+.exploration-upper-stage .portholes {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background: #bad4e0;
+  border-radius: 50%;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  box-shadow: inset 4px 4px 0px #ffffff44;
+  border: solid 7px #96acb6;
+}
 
 .rocket .boosters {
-  height: 20px;
-  width: 80%;
+  z-index: 1;
+  position: relative;
+  height: 15px;
+  width: 55%;
+  bottom: 18px;
   margin: 0 auto;
-  background: #80c768;
+  background: orangered;
   clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  transform: rotate(180deg);
 }
 
-.fire {
-  
+.flame_wrapper {
+  position: relative;
+  bottom: 10px;
+  margin-left: 50px;
+  transform: rotate(45deg);
 }
 
+.flame {
+  position: absolute;
+  border-radius: 10% 80% 10% 80%;
+}
 
+.oranged {
+  width: 80px;
+  height: 80px;
+  background-color: orangered;
+}
+
+.orange {
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+}
+
+.gold {
+  width: 50px;
+  height: 50px;
+  background-color: gold;
+}
+
+.lightyellow {
+  width: 35px;
+  height: 35px;
+  background-color: lightyellow;
+}
 
 
 /* LAPTOP */
@@ -209,7 +282,7 @@ section:nth-child(2) {
   align-items: self-end;
 }
 
-.roof {
+.car .roof {
   position: relative;
   right: 35px;
   width: 65%;
@@ -221,7 +294,7 @@ section:nth-child(2) {
   padding: 6px 14px;
 }
 
-.window {
+.car .window {
   position: relative;
   left: 1px;
   clip-path: polygon(27% 0%, 82% 0, 100% 100%, 0% 100%);
@@ -230,7 +303,7 @@ section:nth-child(2) {
   background: #cae6f2;
 }
 
-.window:after {
+.car .window:after {
   position: absolute;
   content: "";
   height: 100%;
@@ -241,7 +314,7 @@ section:nth-child(2) {
   transform: skewX(14deg);
 }
 
-.fender {
+.car .fender {
   height: 100%;
   width: 100%;
   background: #f47d2d;
@@ -254,7 +327,7 @@ section:nth-child(2) {
   border-bottom-right-radius: 20px;
 }
 
-.indicator-light {
+.car .indicator-light {
   margin-left: 10px;
   height: 22px;
   width: 25px;
@@ -262,7 +335,7 @@ section:nth-child(2) {
   background: #80c768;
 }
 
-.door-handle {
+.car .door-handle {
   margin-top: -6px;
   margin-left: 20px;
   height: 4px;
