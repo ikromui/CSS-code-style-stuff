@@ -1,7 +1,9 @@
-* {
+*,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
 }
 
 pre {
@@ -9,8 +11,8 @@ pre {
   color: white;
   border: 2px solid blue;
 }
-pre code{
-}
+
+pre code {}
 
 section {
   position: relative;
